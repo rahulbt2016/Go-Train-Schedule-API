@@ -14,7 +14,7 @@ The GO Train Schedule API is a NodeJS service that provides a simplified train t
   - [x] Return HTTP 400 (Bad Request), if departure time is not in a valid format.
   
 ### Bonus Tasklist:
-- [ ] Add documentation.
+- [x] Add documentation.
 - [x] Add unit and integration tests to the features requested above.
 - [ ] Enable caching for the requests in a way where the timetable data repository is not queried twice for a repeat request.
 
@@ -29,5 +29,18 @@ The GO Train Schedule API is a NodeJS service that provides a simplified train t
 ### Deployed API (Microsoft Azure - App Services):
 
 [https://go-train-schedule-api.azurewebsites.net/](https://go-train-schedule-api.azurewebsites.net/schedule)
+
+### API Documentation (Swagger):
+
+[https://go-train-schedule-api.azurewebsites.net/api-docs/](https://go-train-schedule-api.azurewebsites.net/api-docs/)
+
+### Learning Outcomes:
+- Learnt to test (unit and integration) the backend using mocha and chai.
+- Learnt to document the API using Swagger.
+
+### Future Enhancements:
+- Store data into MongoDB database.
+- Populate more endpoints, to insert, update and delete data in the train schedule.
+- Enable Caching for reducing response time.
 
 
