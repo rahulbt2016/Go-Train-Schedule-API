@@ -6,3 +6,6 @@ node_modules/
 
 # Ignore Visual Studio Code settings
 .vscode/
+
+# Ignore Istanbul output directory
+.nyc_output/

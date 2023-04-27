@@ -4,12 +4,12 @@ const getSchedule = (req, res) => {
 }
 
 const getLineSchedule = (req, res) => {
-    const line = req.params.line.toUpperCase();
+    const line = req.params.line.toLowerCase();
     trainData = req.trainData;
     departure = req.query.departure;
 
     //FILTERING TRAIN DATA BY LINE
-    trainData = trainData.filter((train) => train.line.toUpperCase() === line);
+    trainData = trainData.filter((train) => train.line.toLowerCase() === line);
 
     //CHECKING IF NO TRAINS FOUND FOR THE LINE
     if (trainData.length === 0) { 
@@ -76,4 +76,8 @@ const isValidTime = (time) => {
     }
 }
 
-module.exports = { getSchedule, getLineSchedule};
+module.exports = { getSchedule, 
+                   getLineSchedule,
+                   compareTime,
+                   convert12To24,
+                   isValidTime };
