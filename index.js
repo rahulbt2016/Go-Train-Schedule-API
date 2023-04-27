@@ -44,8 +44,8 @@ fs.readFile('./data/go-train-schedule.json')
     trainData =  JSON.parse(data);
 
     //STARTING SERVER
-    app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`)); 
+    app.listen(PORT, () => {}); 
   })
   .catch((err) => console.log('Cannot read file: ', err.message));
 
-  module.exports = app;
+module.exports = app;

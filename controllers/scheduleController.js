@@ -1,8 +1,10 @@
+// RETURNS THE SCHEDULE OF ALL TRAINS
 const getSchedule = (req, res) => {
 
     res.status(200).json(req.trainData);
 }
 
+// RETURNS THE SCHEDULE OF A SPECIFIC LINE AND/OR DEPARTURE TIME
 const getLineSchedule = (req, res) => {
     const line = req.params.line.toLowerCase();
     trainData = req.trainData;
@@ -34,6 +36,7 @@ const getLineSchedule = (req, res) => {
     }
 }
 
+//COMPARES GIVEN DEPARTURE TIME WITH SEARCHED TIME
 const compareTime = (departureTime, searchedTime) => {
     //CHECKING IF DEPARTURE TIME IS IN 12-HOUR FORMAT
     if(searchedTime.includes(':')) {
@@ -48,6 +51,7 @@ const compareTime = (departureTime, searchedTime) => {
 
 }
 
+//CONVERTS 12-HOUR FORMAT TO 24-HOUR FORMAT
 const convert12To24 = (time) => {
     let [hours, minutes] = time.split(':');
     minutes = minutes.replace(/\D/g,'');
@@ -62,6 +66,7 @@ const convert12To24 = (time) => {
     return Number(hours + minutes);
 }
 
+//CHECKS IF GIVEN TIME IS IN VALID 12-HOUR OR 24-HOUR FORMAT
 const isValidTime = (time) => {
    
     //CHECKING IF TIME IS IN VALID 12-HOUR FORMAT
