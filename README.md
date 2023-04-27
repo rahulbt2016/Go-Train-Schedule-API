@@ -26,4 +26,8 @@ The GO Train Schedule API is a NodeJS service that provides a simplified train t
 
 ![codeCoverage](https://user-images.githubusercontent.com/32465357/234899686-8f4767c8-5966-4e2e-86f6-7b729edb07df.png)
 
+### Deployed API (Microsoft Azure - App Services):
+
+[https://go-train-schedule-api.azurewebsites.net/](https://go-train-schedule-api.azurewebsites.net/schedule)
+
 
