@@ -6,9 +6,9 @@ const getSchedule = (req, res) => {
 
 // RETURNS THE SCHEDULE OF A SPECIFIC LINE AND/OR DEPARTURE TIME
 const getLineSchedule = (req, res) => {
-    const line = req.params.line.toLowerCase();
-    trainData = req.trainData;
-    departure = req.query.departure;
+    let line = req.params.line.trim().toLowerCase();
+    let trainData = req.trainData;
+    let departure = req.query.departure;
 
     //FILTERING TRAIN DATA BY LINE
     trainData = trainData.filter((train) => train.line.toLowerCase() === line);
