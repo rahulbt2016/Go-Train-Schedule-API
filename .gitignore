@@ -4,3 +4,5 @@ node_modules/
 # Ignore environment variables file
 .env
 
+# Ignore Visual Studio Code settings
+.vscode/
