@@ -43,6 +43,7 @@ The GO Train Schedule API is a NodeJS service that provides a simplified train t
 - Read the data from the json file, in an asynchronous fashion (using fs.readFile()), before starting the server. Stored the data into a global variable and passed it to all the routes, using a middleware. 
 - During my research, I found out lowdb is another great alternative to store and access local json data.
 - Deployed my solution on the Azure cloud, making it very easy to test and evaluate my solution, without even downloading and running the code locally. 
+- During the development phase, I continuously tested all the endpoints using Postman.
 
 ### Future Enhancements:
 - Store data into MongoDB database.
