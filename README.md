@@ -38,6 +38,12 @@ The GO Train Schedule API is a NodeJS service that provides a simplified train t
 - Learnt to test (unit and integration) the backend using mocha and chai.
 - Learnt to document the API using Swagger.
 
+### Ratiocinations on design decisions:
+- Organized code into controllers and routes for improved maintainability and separation of concerns. This helps make the code easier to understand, modify, and maintain in the future
+- Read the data from the json file, in an asynchronous fashion (using fs.readFile()), before starting the server. Stored the data into a global variable and passed it to all the routes, using a middleware. 
+- During my research, I found out lowdb is another great alternative to store and access local json data.
+- Deployed my solution on the Azure cloud, making it very easy to test and evaluate my solution, without even downloading and running the code locally. 
+
 ### Future Enhancements:
 - Store data into MongoDB database.
 - Populate more endpoints, to insert, update and delete data in the train schedule.
